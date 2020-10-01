@@ -1,3 +1,4 @@
+
 const catalog = [
     {
         id: 'el1',
