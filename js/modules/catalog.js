@@ -60,3 +60,5 @@ const catalog = [
         price: 159,
     }
 ];
+
+export default catalog;
