@@ -1,0 +1,91 @@
+:root {
+	--color-light: #f8f9fa;
+	--color-medium: #e8e8e8;
+	--color-dark: #a1a1a1;
+	--color-unaccent: #808080;
+	--color-white: #fff;
+	--color-error-light: #f26b6b;
+	--color-error-dark: #d65c5c;
+
+	--spacing-small: 10px;
+	--spacing-medium: 15px;
+	--spacing-large: 30px;
+
+	--border-radius: 3px;
+	--linear-gradient: linear-gradient(to right, #e2f87c, #d6f567, #c8f151, #b9ee38, #a8eb12);
+	--box-shadow: 
+		0 16px 24px 2px rgba(33,37,41,.02), 
+		0 6px 30px 5px rgba(33,37,41,.04), 
+		0 8px 10px -5px rgba(33,37,41,.1);
+}
+
+* {
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	line-height: 1.7;
+	background: var(--color-light);
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+}
+::-webkit-scrollbar-thumb {
+	background-color: var(--color-dark);
+	border-radius: 5px;
+}
+::-webkit-scrollbar-track {
+	background-color: var(--color-white);
+}
+
+
+.products-container {
+	display: grid;
+  grid-gap: 45px;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	width: 80%;
+	max-width: 1200px;
+	margin: var(--spacing-large) auto;
+}
+.products-element {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding: 25px 20px;
+	border-radius: var(--border-radius);
+	background-color: var(--color-white);
+	box-shadow: var(--box-shadow);
+}
+.products-element__name {
+	margin-bottom: auto;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.products-element__img {
+	width: 100%;
+	height: 270px;
+	margin-top: var(--spacing-medium);
+	object-fit: contain;
+}
+.products-element__price {
+	margin-top: var(--spacing-medium);
+	color: var(--color-unaccent);
+}
+.products-element__btn {
+	margin-top: var(--spacing-medium);
+	padding: var(--spacing-small) var(--spacing-medium);
+	border: 1px solid var(--color-unaccent);
+	border-radius: var(--border-radius);
+	cursor: pointer;
+	outline: none;
+	background: none;
+	font-family: inherit;
+	font-size: inherit;
+}
+.products-element__btn_active {
+	border: 1px solid transparent;
+	background-image: var(--linear-gradient);
+}
