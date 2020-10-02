@@ -1,5 +1,5 @@
 
-$color-light: #f8f9fa;
+$color-light: #f1f4f7;
 $color-medium: #e8e8e8;
 $color-dark: #a1a1a1;
 $color-unaccent: #808080;
@@ -37,9 +37,12 @@ body {
  	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   	height: 60px;
 
-	&__container {
-
-		margin: 0 auto;
+	.container {
+		height: 100%;
+		padding: 0 40px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 	}
 
   	&__title {
@@ -49,10 +52,31 @@ body {
 		display: inline-block;
   	}
 
-	&__cart img {
-		width: 35px;
-		height: 35px;
+	&__cart-holder {
+		display: flex;
+		align-items: center;
+	}
+
+	&__cart {
 		cursor: pointer;
+		border-radius: 50%;
+		transition: background-color .3s;
+
+		&:hover {
+			background-color: #80808030;
+		}
+
+		img {
+			width: 41px;
+			height: 41px;
+			padding: 6px;
+			cursor: pointer;
+		}
+	}
+
+	&__cart-counter {
+		font-size: 20px;
+		margin-left: 10px;
 	}
 }
 
