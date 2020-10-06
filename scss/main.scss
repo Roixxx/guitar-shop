@@ -135,7 +135,7 @@ body {
 .products-element__btn:hover {
     border-color: #00000033;
 }
-.products-element__btn_active {
+.products-element__btn--active {
 	border: 1px solid transparent;
 	background-image: $linear-gradient;
 }

@@ -1,5 +1,5 @@
 
-export let catalog = [
+let catalog = [
     {
         id: 'el1',
         name: 'FENDER SQUIER BULLET STRAT HT HSS BLK',
@@ -62,4 +62,3 @@ export let catalog = [
     }
 ];
 
-export default catalog;

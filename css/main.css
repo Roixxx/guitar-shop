@@ -114,7 +114,7 @@ body {
   border-color: #00000033;
 }
 
-.products-element__btn_active {
+.products-element__btn--active {
   border: 1px solid transparent;
   background-image: linear-gradient(to right, #e2f87c, #d6f567, #c8f151, #b9ee38, #a8eb12);
 }
