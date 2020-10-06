@@ -139,3 +139,23 @@ body {
 	border: 1px solid transparent;
 	background-image: $linear-gradient;
 }
+
+
+
+@media (max-width: 480px) {
+	.header .container  {
+		padding: 0 5px;
+	}
+
+	.header__title {
+		font-size: 32px;
+	}
+}
+
+@media (max-width: 350px) {
+
+
+	.header__title {
+		font-size: 22px;
+	}
+}
