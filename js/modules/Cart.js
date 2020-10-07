@@ -1,12 +1,16 @@
 
-let cartListElement = document.querySelector('.cart__list');
+const cartListElement = document.querySelector('.cart__list');
+const cartTotalPrice = document.querySelector('.cart__total-price');
 
 class Cart {
+
+    showTotalPrice() {
+        cartTotalPrice.textContent = 1213;
+    }
 
     render() {
         let productsInCart = localStorageCart.getProducts();
         let html = '';
-
 
         catalog.forEach( ({id, name, price}) => {
 
@@ -14,10 +18,9 @@ class Cart {
                 html += `
                     <li class="cart__item">
                         <p class="cart__item-name">${name}</p>
-                        <p class="cart__item-price">${price} ₽</p>
+                        <p class="cart__item-price">${price} &#8381;</p>
                     </li>
                 `;
-
             }
         });
 
@@ -29,3 +32,4 @@ class Cart {
 
 const cart = new Cart();
 cart.render();
+cart.showTotalPrice();
