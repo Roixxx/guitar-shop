@@ -85,8 +85,6 @@ body {
 	display: grid;
     grid-gap: 45px;
 	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-
-
 	margin: $spacing-large auto;
 }
 .products-element {
@@ -140,6 +138,30 @@ body {
 	background-image: $linear-gradient;
 }
 
+
+.cart {
+
+	&__holder {
+		margin-top: 20px;
+		background-color: #e8e5e5;
+		border-radius: 10px;
+	}
+
+	&__title {
+		padding-top: 20px;
+		margin-left: 20px;
+	}
+
+	&__list {
+		padding: 20px;
+	}
+
+	&__item {
+		display: flex;
+		justify-content: space-between;
+		padding: 10px 0;
+	}
+}
 
 
 @media (max-width: 480px) {

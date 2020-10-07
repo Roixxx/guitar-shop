@@ -119,6 +119,24 @@ body {
   background-image: linear-gradient(to right, #e2f87c, #d6f567, #c8f151, #b9ee38, #a8eb12);
 }
 
+.cart__holder {
+  margin-top: 20px;
+  background-color: #e8e5e5;
+  border-radius: 10px;
+}
+.cart__title {
+  padding-top: 20px;
+  margin-left: 20px;
+}
+.cart__list {
+  padding: 20px;
+}
+.cart__item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
 @media (max-width: 480px) {
   .header .container {
     padding: 0 5px;
