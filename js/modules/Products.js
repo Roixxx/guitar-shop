@@ -1,6 +1,6 @@
 
 
-const productsSection = document.getElementById('products');
+const productsSectionElement = document.getElementById('products');
 
 class Products {
 
@@ -20,6 +20,8 @@ class Products {
             btn.classList.remove(this.classNameActive);
             btn.textContent = this.addLable;
         }
+
+        headerSection.showItemsInCart();
     }
 
     render() {
@@ -41,18 +43,18 @@ class Products {
                 <li class="products-element">
                     <span class="products-element__name">${name}</span>
                     <img class="products-element__img" src="${img}">
-                    <span class="products-element__price">${price} ₽</span>
-                    <button class="products-element__btn ${activeClass}" onclick="productsPage.handleProductStatus(this, '${id}')">
+                    <span class="products-element__price">Цена: ${price} ₽</span>
+                    <button class="products-element__btn ${activeClass}" onclick="productsSection.handleProductStatus(this, '${id}')">
                         ${activeText}
                     </button>
                 </li>
             `;  
         });
 
-        productsSection.innerHTML = `<ul class="products-container"> ${htmlCatalog} </ul>`;
+        productsSectionElement.innerHTML = `<ul class="products-container"> ${htmlCatalog} </ul>`;
     }
 }
 
-const productsPage = new Products();
-productsPage.render();
+const productsSection = new Products();
+productsSection.render();
 

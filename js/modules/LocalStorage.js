@@ -13,6 +13,10 @@ class LocalStorageCart {
         }
     }
 
+    getNumberOfProducts() {
+        return this.getProducts().length;
+    }
+
     putProduct(id) {
         let products = this.getProducts();
         let pushing = false;
