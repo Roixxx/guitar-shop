@@ -5,9 +5,16 @@ const productsSectionElement = document.getElementById('products');
 class Products {
 
     constructor() {
+        this.catalog = [];
         this.classNameActive = 'products-element__btn--active';
         this.addLable = 'В корзину';
         this.delLable = 'Удалить из корзины';
+    }
+
+    // Получаем каталог из сервера
+    async getCatalog() {
+        let data = await fetch('server/data.json');
+        this.catalog = await data.json();
     }
 
     // Кладём или удаляем из корзины
@@ -26,10 +33,10 @@ class Products {
 
     // рендер товаров
     render() {
-        let localCart = localStorageCart.getProducts(); // получаем товар из localStorage
-        let htmlCatalog = '';
+        let localCart = localStorageCart.getProducts(); // получаем товары, которые уже в корзине
+        let html = '';
 
-        catalog.forEach( ({ id, name, price, img }) => {
+        this.catalog.forEach( ({ id, name, price, img }) => {
             let activeClass = '';
             let activeText = '';
 
@@ -40,7 +47,7 @@ class Products {
                 activeText = this.delLable;
             }
 
-            htmlCatalog += `
+            html += `
                 <li class="products-element">
                     <span class="products-element__name">${name}</span>
                     <img class="products-element__img" src="${img}">
@@ -52,10 +59,9 @@ class Products {
             `;  
         });
 
-        productsSectionElement.innerHTML = `<ul class="products-container"> ${htmlCatalog} </ul>`;
+        productsSectionElement.innerHTML = `<ul class="products-container"> ${html} </ul>`;
     }
 }
 
 const productsSection = new Products();
-productsSection.render();
 

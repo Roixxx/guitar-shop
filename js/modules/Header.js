@@ -8,5 +8,4 @@ class Header {
     }
 }
 
-headerSection = new Header();
-headerSection.showItemsInCart();
+const headerSection = new Header();
