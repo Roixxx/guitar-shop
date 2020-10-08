@@ -45,11 +45,20 @@ body {
 		align-items: center;
 	}
 
-  	&__title {
-		font-weight: 600;
+  	&__title a {
+		font-weight: 400;
+		color: black !important;
 		font-size: 40px;
 		text-align: center;
 		display: inline-block;
+		font-family: 'Roboto', sans-serif;
+		background: url('../img/guitar.png') no-repeat;
+		background-size: contain;
+		padding-left: 60px;
+
+		&:hover {
+			color: black;
+		}
   	}
 
 	&__cart-holder {
@@ -149,7 +158,7 @@ body {
 	}
 
 	&__title {
-
+		margin: 20px 0;
 	}
 
 	&__list {
@@ -164,9 +173,29 @@ body {
 
 	&__total {
 		border-top: 2px solid #797777;
-		padding-top: 10px;
+		padding-top: 20px;
+		margin-top: 20px;
 		text-align: right;
 		font-size: 27px;
+	}
+
+	&__empty {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		margin-top: 20px;
+	}
+
+	&__empty-btn {
+		background-color: #b8f18c;
+		padding: 10px 20px;
+		margin: 30px 0;
+		color: #000;
+		transition: background-color 0.3s;
+
+		&:hover {
+			background-color: #a3d57d;
+		}
 	}
 }
 

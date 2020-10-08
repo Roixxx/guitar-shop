@@ -25,11 +25,19 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.header__title {
-  font-weight: 600;
+.header__title a {
+  font-weight: 400;
+  color: black !important;
   font-size: 40px;
   text-align: center;
   display: inline-block;
+  font-family: "Roboto", sans-serif;
+  background: url("../img/guitar.png") no-repeat;
+  background-size: contain;
+  padding-left: 60px;
+}
+.header__title a:hover {
+  color: black;
 }
 .header__cart-holder {
   display: flex;
@@ -125,6 +133,9 @@ body {
   border-radius: 10px;
   padding: 20px 40px;
 }
+.cart__title {
+  margin: 20px 0;
+}
 .cart__list {
   font-size: 22px;
 }
@@ -135,9 +146,26 @@ body {
 }
 .cart__total {
   border-top: 2px solid #797777;
-  padding-top: 10px;
+  padding-top: 20px;
+  margin-top: 20px;
   text-align: right;
   font-size: 27px;
+}
+.cart__empty {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.cart__empty-btn {
+  background-color: #b8f18c;
+  padding: 10px 20px;
+  margin: 30px 0;
+  color: #000;
+  transition: background-color 0.3s;
+}
+.cart__empty-btn:hover {
+  background-color: #a3d57d;
 }
 
 @media (max-width: 480px) {

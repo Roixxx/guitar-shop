@@ -4,8 +4,12 @@ const cartTotalPrice = document.querySelector('.cart__total-price');
 
 class Cart {
 
+    constructor() {
+        this.totalPrice = 0;
+    }
+
     showTotalPrice() {
-        cartTotalPrice.textContent = 1213;
+        cartTotalPrice.textContent = this.totalPrice;
     }
 
     render() {
@@ -15,6 +19,8 @@ class Cart {
         catalog.forEach( ({id, name, price}) => {
 
             if (productsInCart.indexOf(id) !== -1) { // проверяем на присутствие в корзине
+                this.totalPrice += price;
+
                 html += `
                     <li class="cart__item">
                         <p class="cart__item-name">${name}</p>
@@ -23,6 +29,14 @@ class Cart {
                 `;
             }
         });
+
+        if (!html) {
+            html = 
+            `<li class="cart__empty">
+                <p>В корзине нет товаров</p>
+                <a class='cart__empty-btn' href='./'>Каталог товаров</a>
+            </li>`;
+        }
 
         cartListElement.innerHTML = html;
     }
