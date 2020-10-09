@@ -16,7 +16,7 @@ class Cart {
         let productsInCart = localStorageCart.getProducts();
         let html = '';
 
-        catalog.forEach( ({id, name, price}) => {
+        productsSection.catalog.forEach( ({id, name, price}) => {
 
             if (productsInCart.indexOf(id) !== -1) { // проверяем на присутствие в корзине
                 this.totalPrice += price;
@@ -45,5 +45,3 @@ class Cart {
 
 
 const cart = new Cart();
-cart.render();
-cart.showTotalPrice();
