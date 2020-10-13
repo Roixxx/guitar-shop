@@ -1,10 +1,9 @@
 class LocalStorageCart {
     constructor () {
-        this.keyName = 'products';
     }
 
     getProducts() {
-        let productsLocalStorage = localStorage.getItem(this.keyName);
+        let productsLocalStorage = localStorage.getItem('productIDs');
 
         if (productsLocalStorage) {
             return JSON.parse(productsLocalStorage);
@@ -30,7 +29,7 @@ class LocalStorageCart {
             products.splice(index, 1)
         }
         
-        localStorage.setItem(this.keyName, JSON.stringify(products));
+        localStorage.setItem('productIDs', JSON.stringify(products));
 
         return pushing;
     }
