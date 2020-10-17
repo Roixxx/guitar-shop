@@ -13,8 +13,9 @@ class Products {
 
     // Получаем каталог из сервера
     async getCatalog() {
-        let data = await fetch('server/data.json')
-        this.catalog = await data.json()
+        let data = await fetch('http://shop/data.php');
+        console.log(data)
+        //this.catalog = await data.json()
         return this.catalog;
     }
 
