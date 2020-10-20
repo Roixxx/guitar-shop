@@ -1,23 +1,26 @@
-
-
 <?php> 
-
-
-
 
 $link = mysqli_connect($host, $user, $pass, $db_name); // Соединяемся с базой
 
 if (!$link) {
-    
     echo 'Не могу соединиться с БД. Код ошибки: ' . mysqli_connect_errno() . ', ошибка: ' . mysqli_connect_error();
     exit;
 }
 
 
-$sql = mysqli_query($link, 'SELECT `id`, `name`, `img`, `price` FROM `catalog`');
+$sql = "select * from catalog";
+$result = mysqli_query($link, $sql) or die("Error in Selecting " . mysqli_error($connection));
 
-while ($result = mysqli_fetch_array($sql)) {
-    echo "{$result['id']}, {$result['name']}, {$result['img']}, {$result['price']}";
+//создаем массив
+$arr = array();
+
+//добавляем данные в массив
+while($row = mysqli_fetch_assoc($result)) {
+    $arr[] = $row;
 }
 
+//выводим в JSON
+echo json_encode($arr);
 
+//закрываем соединение с бд
+mysqli_close($link);

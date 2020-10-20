@@ -12,11 +12,15 @@ class Products {
     }
 
     // Получаем каталог из сервера
-    async getCatalog() {
-        let data = await fetch('http://shop/data.php');
-        console.log(data)
-        //this.catalog = await data.json()
-        return this.catalog;
+    getCatalog() {
+
+        return new Promise( (resolve, reject) => {
+            fetch('data.php')
+                .then( res => res.json())
+                .then( data => this.catalog = data)
+                .then( () =>  resolve())
+                .catch( err => console.log('Не удалось загрузить товары ', err) );
+        });
     }
 
     // Кладём или удаляем из корзины
@@ -35,6 +39,7 @@ class Products {
 
     // рендер товаров
     render() {
+
         let localCart = localStorageCart.getProducts(); // получаем товары, которые уже в корзине
         let html = '';
 

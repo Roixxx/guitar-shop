@@ -19,7 +19,7 @@ class Cart {
         productsSection.catalog.forEach( ({id, name, price}) => {
 
             if (productsInCart.indexOf(id) !== -1) { // проверяем на присутствие в корзине
-                this.totalPrice += price;
+                this.totalPrice += +price;
 
                 html += `
                     <li class="cart__item">

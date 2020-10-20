@@ -1,9 +1,9 @@
 async function renderIndex () {
-    await headerSection.showItemsInCart();
-    await productsSection.getCatalog();
-    await productsSection.render();
+    headerSection.showItemsInCart();
+    await productsSection.getCatalog()
+    productsSection.render();
 }
 
 renderIndex().catch( err => {
-    alert('Ошибка при загрузке товаров');
+    alert('Ошибка при загрузке страницы', err);
 });

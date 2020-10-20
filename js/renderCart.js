@@ -1,8 +1,8 @@
 async function renderCart () {
-    await headerSection.showItemsInCart();
+    headerSection.showItemsInCart();
     await productsSection.getCatalog();
-    await cart.render();
-    await cart.showTotalPrice();
+    cart.render();
+    cart.showTotalPrice();
 }
 
 renderCart().catch( err => {
