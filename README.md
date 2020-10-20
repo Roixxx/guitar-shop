@@ -1,2 +1,2 @@
-This is a simple todo list that build on js.
+This is a simple guitar shop
 Check it out https://roixxx.github.io/to-do-list/
