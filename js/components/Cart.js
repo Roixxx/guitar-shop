@@ -1,6 +1,5 @@
-
 const cartListElement = document.querySelector('.cart__list');
-const cartTotalPrice = document.querySelector('.cart__total-price');
+const cartTotalPrice = document.querySelector('.cart__footer-price');
 
 class Cart {
 
@@ -13,6 +12,7 @@ class Cart {
     }
 
     render() {
+
         let productsInCart = localStorageCart.getProducts();
         let html = '';
 
@@ -34,14 +34,11 @@ class Cart {
             html = 
             `<li class="cart__empty">
                 <p>В корзине нет товаров</p>
-                <a class='cart__empty-btn' href='./'>Каталог товаров</a>
             </li>`;
         }
 
         cartListElement.innerHTML = html;
     }
-
 }
-
 
 const cart = new Cart();

@@ -96,6 +96,11 @@ body {
 	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 	margin: $spacing-large auto;
 }
+
+.products__title {
+	margin: 30px 0 ;
+}
+
 .products-element {
 	max-width: 400px;
 	display: flex;
@@ -147,6 +152,18 @@ body {
 	background-image: $linear-gradient;
 }
 
+.products-error {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 20px;
+	text-align: center;
+
+	p {
+		font-size: 25px;
+	}
+}
+
 
 .cart {
 
@@ -171,7 +188,9 @@ body {
 		padding: 10px 0;
 	}
 
-	&__total {
+	&__footer {
+		display: flex;
+		justify-content: space-between;
 		border-top: 2px solid #797777;
 		padding-top: 20px;
 		margin-top: 20px;
@@ -196,6 +215,12 @@ body {
 		&:hover {
 			background-color: #a3d57d;
 		}
+	}
+
+	&__go-back {
+		margin: 0;
+		padding: 5px 10px;
+		font-size: 20px;
 	}
 }
 

@@ -6,5 +6,11 @@ async function renderCart () {
 }
 
 renderCart().catch( err => {
-    alert('Ошибка при загрузке карзины');
+
+    cartListElement.innerHTML = 
+    `<div class="products-error">
+        <p>Не удалось загрузить товары</p>
+        <p>${err}</p>
+    </div>`;
+    
 });

@@ -1,5 +1,6 @@
 <?php> 
 
+
 $link = mysqli_connect($host, $user, $pass, $db_name); // Соединяемся с базой
 
 if (!$link) {

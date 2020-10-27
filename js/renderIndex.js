@@ -5,5 +5,11 @@ async function renderIndex () {
 }
 
 renderIndex().catch( err => {
-    alert('Ошибка при загрузке страницы', err);
+
+    productsContainer.innerHTML =    
+    `<div class="products-error">
+        <p>Не удалось загрузить товары</p>
+        <p>${err}</p>
+    </div>`;
+    
 });

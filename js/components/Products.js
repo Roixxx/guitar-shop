@@ -1,6 +1,6 @@
 
 
-const productsSectionElement = document.getElementById('products');
+const productsContainer = document.getElementById('products-container');
 
 class Products {
 
@@ -19,7 +19,7 @@ class Products {
                 .then( res => res.json())
                 .then( data => this.catalog = data)
                 .then( () =>  resolve())
-                .catch( err => console.log('Не удалось загрузить товары ', err) );
+                .catch( err => reject(err));
         });
     }
 
@@ -66,7 +66,7 @@ class Products {
             `;  
         });
 
-        productsSectionElement.innerHTML = `<ul class="products-container"> ${html} </ul>`;
+        productsContainer.innerHTML = html;
     }
 }
 
