@@ -33,7 +33,7 @@ class Cart {
         if (!html) {
             html = 
             `<li class="cart__empty">
-                <p>В корзине нет товаров</p>
+                <p>Cart is empty</p>
             </li>`;
         }
 

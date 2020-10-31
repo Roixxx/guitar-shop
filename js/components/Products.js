@@ -7,8 +7,8 @@ class Products {
     constructor() {
         this.catalog = [];
         this.classNameActive = 'products-element__btn--active';
-        this.addLable = 'В корзину';
-        this.delLable = 'Удалить из корзины';
+        this.addLable = 'Add to cart';
+        this.delLable = 'Remove from cart';
     }
 
     // Получаем каталог из сервера
