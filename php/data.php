@@ -1,14 +1,6 @@
 <?php> 
 
-
-
-$link = mysqli_connect($host, $user, $pass, $db_name); // Соединяемся с базой
-
-if (!$link) {
-    echo 'Не могу соединиться с БД. Код ошибки: ' . mysqli_connect_errno() . ', ошибка: ' . mysqli_connect_error();
-    exit;
-}
-
+require_once 'connection.php';
 
 $sql = "select * from catalog";
 $result = mysqli_query($link, $sql) or die("Error in Selecting " . mysqli_error($connection));

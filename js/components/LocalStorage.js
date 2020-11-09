@@ -1,7 +1,5 @@
 class LocalStorageCart {
-    constructor () {
-    }
-
+	
     getProducts() {
         let productsLocalStorage = localStorage.getItem('productIDs');
 
