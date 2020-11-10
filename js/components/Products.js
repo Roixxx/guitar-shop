@@ -15,7 +15,7 @@ class Products {
     getCatalog() {
 
         return new Promise( (resolve, reject) => {
-            fetch('../php/data.php')
+            fetch('../php/getProducts.php')
                 .then( res => res.json())
                 .then( data => this.catalog = data)
                 .then( () =>  resolve())

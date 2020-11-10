@@ -25,32 +25,32 @@
 	<section class="product">
 		<div class="container">
 
-			<div class="product__holder">
-				<h2 class="product__title">FENDER SQUIER BULLET STRAT HT</h2>
-
-				<div class="product__desc">
+			<h2 class="product__title">FENDER SQUIER BULLET STRAT HT</h2>
+			<div class="product__info">
+				<div class="product__left">
 					<img class="product__img" src="https://i.ibb.co/QJfqs4K/1.jpg">
-					<div>
-						<h3 class="product__desc-title">Характеристики</h3>
-						<ul class="product__desc-list">
-							<li>Производитель: Alhambra</li>
-							<li>Бридж: Фиксированный</li>
-							<li>Наличие выреза: С вырезом</li>
-							<li>Количество ладов: 22</li>
-							<li>Покрытие: Глянцевое</li>
-							<li>Материал грифа: Красное дерево</li>
-							<li>Цвет: Золотой</li>
-						</ul>
+				</div>
 
-
-
+				<div class="product__right product__desc">
+					
+					<h3 class="product__desc-title">Характеристики</h3>
+					<ul class="product__desc-list">
+						<li class="product__desc-item">Производитель: Alhambra.</li>
+						<li class="product__desc-item">Бридж: Фиксированный.</li>
+						<li class="product__desc-item">Наличие выреза: С вырезом.</li>
+						<li class="product__desc-item">Количество ладов: 22.</li>
+						<li class="product__desc-item">Покрытие: Глянцевое.</li>
+						<li class="product__desc-item">Материал грифа: Красное дерево.</li>
+						<li class="product__desc-item">Цвет: Золотой.</li>
+					</ul>
+					
+					<div class="product__bottom">
 						<p class="product__price">1200 &#8381;</p>
 						<button class="products-element__btn addToCart">
-							Add to cart
+							в корзину
 						</button>
 					</div>
 				</div>
-				
 			</div>
 
 		</div>
@@ -59,11 +59,10 @@
 
 
 
+	<script src="js/components/LocalStorage.js"></script>
     <script src="js/components/Header.js"></script>
-    <script src="js/components/LocalStorage.js"></script>
-    <script src="js/components/Products.js"></script>
-    <script src="js/components/Cart.js"></script>
-    <script src="js/renderCart.js"></script>
+    <script src="js/components/SingleProduct.js"></script>
+    
 
 </body>
 </html>

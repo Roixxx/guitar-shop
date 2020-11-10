@@ -243,16 +243,20 @@ body {
 		margin: 30px 0;
 	}
 
-	&__holder {
+	.container {
 		margin-top: 20px;
     background-color: #e8e5e5;
     border-radius: 10px;
     padding: 20px 40px;
 	}
 
+	&__info {
+		display: flex;
+	}
+
 	&__desc {
 		display: flex;
-
+		flex-direction: column;
 	}
 
 	&__img {
@@ -271,8 +275,11 @@ body {
 	}
 
 	.addToCart {
+		margin: 0;
+		margin-left: 20px;
 		font-size: 20px;
 		border: 3px solid #b1b1b1;
+		padding: 10px;
 
 		&:hover {
 			border-color: #be7e7e;
@@ -281,10 +288,23 @@ body {
 	
 	&__desc-title {
 		margin-bottom: 20px;
+		font-size: 22px;
 	}
 
 	&__desc-list {
 		font-size: 20px;
+		border-bottom: 2px solid #ebfddd;
+		padding-bottom: 10px;
+		margin-bottom: 30px;
+	}
+
+	&__desc-item {
+		margin: 10px 0;
+	}
+
+	&__bottom {
+		display: flex;
+		align-items: center;
 	}
 
 
