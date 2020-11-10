@@ -56,7 +56,7 @@ class Products {
 
             html += `
                 <li class="products-element">
-                    <span class="products-element__name">${name}</span>
+                    <a href="/product.html?id=${id}" class="products-element__name">${name}</a>
                     <img class="products-element__img" src="${img}">
                     <span class="products-element__price">Price: ${price} &#8381;</span>
                     <button class="products-element__btn ${activeClass}" onclick="productsSection.handleProductStatus(this, '${id}')">
