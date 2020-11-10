@@ -295,6 +295,23 @@ body {
 }
 
 .product__price {
+  font-size: 30px;
+}
+
+.product .addToCart {
+  font-size: 20px;
+  border: 3px solid #b1b1b1;
+}
+
+.product .addToCart:hover {
+  border-color: #be7e7e;
+}
+
+.product__desc-title {
+  margin-bottom: 20px;
+}
+
+.product__desc-list {
   font-size: 20px;
 }
 
