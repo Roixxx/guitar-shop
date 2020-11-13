@@ -8,6 +8,7 @@ $result = mysqli_query($link, $sql) or die("Error in Selecting " . mysqli_error(
 //создаем массив
 $arr = array();
 
+
 //добавляем данные в массив
 while($row = mysqli_fetch_assoc($result)) {
     $arr[] = $row;

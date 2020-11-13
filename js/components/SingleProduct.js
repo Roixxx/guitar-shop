@@ -4,8 +4,8 @@ class SingleProduct {
 	getProduct() {
 
 		fetch('../../php/getSingleProduct.php')
-			.then( res => res.text())
-			.then( val => console.log(val))
+			.then(res => res.text())
+			.then(val => console.log(val))
 	}
 
 	render() {

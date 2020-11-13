@@ -2,10 +2,10 @@
 const itemsInCartElement = document.querySelector('.header__cart-counter');
 
 class Header {
-    
-    showItemsInCart() {
-        itemsInCartElement.textContent = localStorageCart.getNumberOfProducts();
-    }
+
+	showItemsInCart() {
+		itemsInCartElement.textContent = localStorageCart.getNumberOfProducts();
+	}
 }
 
 const headerSection = new Header();

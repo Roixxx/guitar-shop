@@ -1,37 +1,42 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guitar Shop</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Guitar Shop</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,800;1,400&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,800;1,400&display=swap"
+		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
-    
-    <header id="header" class="header">
-        <div class="container">
-            <h1 class="header__title"><a href="./">Guitar Go</a></h1>
-            <div class="header__cart-holder">
-                <a href="/cart.html" class="header__cart" onclick="cart.showCart()"><img src="img/cart.png" alt="Cart"></a>
-                <p class="header__cart-counter">0</p>
-            </div>
-            
-        </div>
 
-    </header>
-    <section class="products container" id="products">
-        <h2 class="products__title">Product catalog</h2>
-        <ul class="products-container" id="products-container"></ul>
-    </section>
- 
+	<header id="header" class="header">
+		<div class="container">
+			<h1 class="header__title"><a href="./">Guitar Go</a></h1>
+			<div class="header__cart-holder">
+				<a href="/cart.html" class="header__cart" onclick="cart.showCart()"><img src="img/cart.png" alt="Cart"></a>
+				<p class="header__cart-counter">0</p>
+			</div>
 
-    <script src="js/components/LocalStorage.js"></script>
-    <script src="js/components/Header.js"></script>
-    <script src="js/components/Products.js"></script>
-    <script src="js/renderIndex.js"></script>
+		</div>
+
+	</header>
+
+	<section class="products container" id="products">
+		<h2 class="products__title">Product catalog</h2>
+		<ul class="products-container" id="products-container"></ul>
+	</section>
+
+
+	<script src="js/components/LocalStorage.js"></script>
+	<script src="js/components/Header.js"></script>
+	<script src="js/components/Products.js"></script>
+	<script src="js/renderIndex.js"></script>
 </body>
+
 </html>

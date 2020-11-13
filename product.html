@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guitar Shop</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,800;1,400&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Guitar Shop</title>
+
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,800;1,400&display=swap"
+		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
-    
-    <header id="header" class="header">
-        <div class="container">
-            <h1 class="header__title"><a href="./">Guitar Go</a></h1>
-            <div class="header__cart-holder">
-                <a class="header__cart" onclick="cart.showCart()"><img src="img/cart.png" alt="Cart"></a>
-                <p class="header__cart-counter">0</p>
-            </div>
-        </div>
+
+	<header id="header" class="header">
+		<div class="container">
+			<h1 class="header__title"><a href="./">Guitar Go</a></h1>
+			<div class="header__cart-holder">
+				<a class="header__cart" onclick="cart.showCart()"><img src="img/cart.png" alt="Cart"></a>
+				<p class="header__cart-counter">0</p>
+			</div>
+		</div>
 	</header>
-		
+
 	<section class="product">
 		<div class="container">
 
@@ -32,7 +35,7 @@
 				</div>
 
 				<div class="product__right product__desc">
-					
+
 					<h3 class="product__desc-title">Характеристики</h3>
 					<ul class="product__desc-list">
 						<li class="product__desc-item">Производитель: Alhambra.</li>
@@ -43,7 +46,7 @@
 						<li class="product__desc-item">Материал грифа: Красное дерево.</li>
 						<li class="product__desc-item">Цвет: Золотой.</li>
 					</ul>
-					
+
 					<div class="product__bottom">
 						<p class="product__price">1200 &#8381;</p>
 						<button class="products-element__btn addToCart">
@@ -54,15 +57,16 @@
 			</div>
 
 		</div>
-			
+
 	</section>
 
 
 
 	<script src="js/components/LocalStorage.js"></script>
-    <script src="js/components/Header.js"></script>
-    <script src="js/components/SingleProduct.js"></script>
-    
+	<script src="js/components/Header.js"></script>
+	<script src="js/components/SingleProduct.js"></script>
+
 
 </body>
+
 </html>

@@ -1,36 +1,36 @@
 class LocalStorageCart {
-	
-    getProducts() {
-        let productsLocalStorage = localStorage.getItem('productIDs');
 
-        if (productsLocalStorage) {
-            return JSON.parse(productsLocalStorage);
-        } else {
-            return [];
-        }
-    }
+	getProducts() {
+		let productsLocalStorage = localStorage.getItem('productIDs');
 
-    getNumberOfProducts() {
-        return this.getProducts().length;
-    }
+		if (productsLocalStorage) {
+			return JSON.parse(productsLocalStorage);
+		} else {
+			return [];
+		}
+	}
 
-    putProduct(id) {
-        let products = this.getProducts();
-        let pushing = false;
-        let index = products.indexOf(id)
+	getNumberOfProducts() {
+		return this.getProducts().length;
+	}
 
-        // Есть ли товар в корзине?
-        if (index === -1) { 
-            products.push(id);
-            pushing = true;
-        } else {
-            products.splice(index, 1)
-        }
-        
-        localStorage.setItem('productIDs', JSON.stringify(products));
+	putProduct(id) {
+		let products = this.getProducts();
+		let pushing = false;
+		let index = products.indexOf(id)
 
-        return pushing;
-    }
+		// Есть ли товар в корзине?
+		if (index === -1) {
+			products.push(id);
+			pushing = true;
+		} else {
+			products.splice(index, 1)
+		}
+
+		localStorage.setItem('productIDs', JSON.stringify(products));
+
+		return pushing;
+	}
 }
 
 const localStorageCart = new LocalStorageCart();

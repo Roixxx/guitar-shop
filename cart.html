@@ -1,52 +1,56 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guitar Shop</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Guitar Shop</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,800;1,400&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,800;1,400&display=swap"
+		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
-    
-    <header id="header" class="header">
-        <div class="container">
-            <h1 class="header__title"><a href="./">Guitar Go</a></h1>
-            <div class="header__cart-holder">
-                <a class="header__cart" onclick="cart.showCart()"><img src="img/cart.png" alt="Cart"></a>
-                <p class="header__cart-counter">0</p>
-            </div>
-        </div>
-    </header>
 
-    <section class="cart">
-        <div class="container">
-            <div class="cart__holder">
-                <h2 class="cart__title">Cart</h2>
-                <ul class="cart__list">
-                    <li class="cart__item">
-                        <p class="cart__item-name"></p>
-                        <p class="cart__item-price"></p>
-                    </li>
-                </ul>
-                <div class="cart__footer">
-                    <a class="cart__empty-btn cart__go-back" href="./">Product catalog</a>
-                    <p>Total: <span class="cart__footer-price"></span> &#8381;</p>
-                </div>
-            </div>
-        </div>
-    </section>
+	<header id="header" class="header">
+		<div class="container">
+			<h1 class="header__title"><a href="./">Guitar Go</a></h1>
+			<div class="header__cart-holder">
+				<a class="header__cart" onclick="cart.showCart()"><img src="img/cart.png" alt="Cart"></a>
+				<p class="header__cart-counter">0</p>
+			</div>
+		</div>
+	</header>
+
+	<section class="cart">
+		<div class="container">
+			<div class="cart__holder">
+				<h2 class="cart__title">Cart</h2>
+				<ul class="cart__list">
+					<li class="cart__item">
+						<p class="cart__item-name"></p>
+						<p class="cart__item-price"></p>
+					</li>
+				</ul>
+				<div class="cart__footer">
+					<a class="cart__empty-btn cart__go-back" href="./">Product catalog</a>
+					<p>Total: <span class="cart__footer-price"></span> &#8381;</p>
+				</div>
+			</div>
+		</div>
+	</section>
 
 
 
-    <script src="js/components/Header.js"></script>
-    <script src="js/components/LocalStorage.js"></script>
-    <script src="js/components/Products.js"></script>
-    <script src="js/components/Cart.js"></script>
-    <script src="js/renderCart.js"></script>
+	<script src="js/components/Header.js"></script>
+	<script src="js/components/LocalStorage.js"></script>
+	<script src="js/components/Products.js"></script>
+	<script src="js/components/Cart.js"></script>
+	<script src="js/renderCart.js"></script>
 
 </body>
+
 </html>
