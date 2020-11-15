@@ -1,9 +1,12 @@
 class SingleProduct {
 
 
-	getProduct() {
+	getParam() {
+		return window.location.search.replace('?', '');
+	}
 
-		fetch('../../php/getSingleProduct.php')
+	getProduct() {
+		fetch('../../php/getSingleProduct.php?' + this.getParam())
 			.then(res => res.text())
 			.then(val => console.log(val))
 	}
