@@ -18,4 +18,3 @@ while ($row = mysqli_fetch_assoc($product_meta)) {
 
 echo json_encode($arr);
 
-mysqli_close($link);
