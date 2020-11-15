@@ -4,8 +4,10 @@
 require_once 'connection.php';
 
 $id = $_GET['id'];
+$sql = "SELECT `meta_key`, `meta_value` FROM `product_meta` WHERE `product_id` = '$id'";
 
-$product_meta = mysqli_query($link, "SELECT * FROM `product_meta` WHERE `product_id` = '$id'");
+
+$product_meta = mysqli_query($link, $sql);
 
 $arr = array();
 
