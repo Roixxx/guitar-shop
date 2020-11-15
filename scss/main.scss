@@ -1,4 +1,4 @@
-$color-light: #f1f4f7;
+$color-light: #f1f4ff;
 $color-unaccent: #808080;
 $color-white: #fff;
 
@@ -236,7 +236,7 @@ body {
 
 	.container {
 		margin-top: 20px;
-		background-color: #e8e5e5;
+		background-color: #fcfbf7;
 		border-radius: 10px;
 		padding: 20px 40px;
 	}
@@ -271,6 +271,7 @@ body {
 		font-size: 20px;
 		border: 3px solid #b1b1b1;
 		padding: 10px;
+		background-color: white;
 
 		&:hover {
 			border-color: #be7e7e;
@@ -284,7 +285,7 @@ body {
 
 	&__desc-list {
 		font-size: 20px;
-		border-bottom: 2px solid #ebfddd;
+		border-bottom: 2px solid black;
 		padding-bottom: 10px;
 		margin-bottom: 30px;
 	}

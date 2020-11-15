@@ -4,9 +4,8 @@
 require_once 'connection.php';
 
 
-$id = $_GET['id'];
-
-
-
-
-echo $id; // val1
+if (isset($_GET['id']) && !empty($_GET['id'])) {
+	echo "App = " . $_GET['id'];
+} else {
+	echo "no id";
+}
