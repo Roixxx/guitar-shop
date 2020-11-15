@@ -1,15 +1,22 @@
 class SingleProduct {
 
+	constructor() {
+		this.product = [];
+	}
 
 	getParam() {
 		return window.location.search.replace('?', '');
 	}
 
 	getProduct() {
-		fetch('../../php/getSingleProduct.php?' + this.getParam())
-			.then(res => res.text())
-			.then(val => console.log(val))
+		fetch('../../php/getProduct.php?' + this.getParam())
+			.then(res => res.json())
+			.then(res => this.product = res)
+			.then((value) => {
+				console.log(this.product)
+			})
 	}
+
 
 	render() {
 		console.log('ok')
@@ -19,5 +26,4 @@ class SingleProduct {
 
 
 const singleProduct = new SingleProduct();
-singleProduct.getProduct();
-
+singleProduct.getProduct()
