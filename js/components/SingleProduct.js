@@ -28,20 +28,23 @@ class SingleProduct {
 	render() {
 
 		let prodInfo = this.product.info;
+
+		// Product content
 		productDesc.innerHTML    = '';
 		productTitle.textContent = prodInfo.name;
 		productPrice.textContent = prodInfo.price + ' Р';
 		productImg.src           = prodInfo.img;
 
-		productBtn.onclick = () => productsSection.handleProductStatus(productBtn, prodInfo.id);
+		// Add to cart btn
+		productBtn.onclick = () => cart.handleCartBtnLable(productBtn, prodInfo.id);
+		productBtn.textContent = cart.getCartBtnLable(prodInfo.id).activeText;
+		productBtn.classList.add( cart.getCartBtnLable(prodInfo.id).activeClass );
 
-
+		// Product characteristics
 		this.product.characteristics.forEach((el) => {
-
 			let li = `<li class="product__desc-item">${el.meta_key}: ${el.meta_value}</li>`
 			productDesc.innerHTML += li;
 		})
-	
 	}
 }
 
