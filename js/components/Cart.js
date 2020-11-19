@@ -18,7 +18,7 @@ class Cart {
 	getCartBtnLable(productID) {
 		let localCart = localStorageCart.getProducts(); // получаем товары, которые уже в корзине
 
-		let activeClass = '';
+		let activeClass = 'z';
 		let activeText = '';
 
 		if (localCart.indexOf(productID) === -1) { // Есть ли товар в корзине?

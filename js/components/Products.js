@@ -25,9 +25,9 @@ class Products {
 			
 			html += `
 				<li class="products-element">
-					<a href="/product.html?id=${id}" class="products-element__name">${name}</a>
-					<img class="products-element__img" src="${img}">
-					<span class="products-element__price">Price: ${price} &#8381;</span>
+					<a href="/product.html?id=${id}" class="products-element__name">${name}
+					<img class="products-element__img" src="${img}"></a>
+					<span class="products-element__price">Цена: ${price} &#8381;</span>
 					<button class="products-element__btn ${cart.getCartBtnLable(id).activeClass}" onclick="cart.handleCartBtnLable(this, '${id}')">
 						${cart.getCartBtnLable(id).activeText}
 					</button>

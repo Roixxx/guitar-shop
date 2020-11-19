@@ -34,6 +34,20 @@ body {
           align-items: center;
 }
 
+.header__link {
+  font-size: 23px;
+  color: #000;
+  font-size: 800;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.header__link:hover {
+  background-color: #80808030;
+}
+
 .header__title a {
   font-weight: 400;
   color: black !important;
@@ -134,7 +148,7 @@ body {
 }
 
 .products-element__name:hover {
-  color: bisque;
+  color: #903e3e;
 }
 
 .products-element__img {
@@ -196,7 +210,7 @@ body {
 
 .cart__holder {
   margin-top: 20px;
-  background-color: #e8e5e5;
+  background-color: #fcfbf7;
   border-radius: 10px;
   padding: 20px 40px;
 }
@@ -226,6 +240,9 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-top: 2px solid #797777;
   padding-top: 20px;
   margin-top: 20px;
@@ -262,7 +279,7 @@ body {
 
 .cart__go-back {
   margin: 0;
-  padding: 5px 10px;
+  padding: 13px 15px;
   font-size: 20px;
 }
 
@@ -291,6 +308,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .product__img {
@@ -311,14 +331,26 @@ body {
 .product .addToCart {
   margin: 0;
   margin-left: 20px;
-  font-size: 20px;
-  border: 3px solid #b1b1b1;
-  padding: 10px;
-  background-color: white;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  padding: 0.8em 1em calc(.8em + 3px);
+  border-radius: 3px;
+  background: #40c781;
+  -webkit-box-shadow: 0 -3px #35a76e inset;
+          box-shadow: 0 -3px #35a76e inset;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .product .addToCart:hover {
-  border-color: #be7e7e;
+  background: #35a76e;
+}
+
+.product .addToCart:active {
+  background: #21935a;
+  -webkit-box-shadow: 0 3px #21935a inset;
+          box-shadow: 0 3px #21935a inset;
 }
 
 .product__desc-title {
@@ -328,7 +360,7 @@ body {
 
 .product__desc-list {
   font-size: 20px;
-  border-bottom: 2px solid black;
+  border-bottom: 1px solid #b0a2a2;
   padding-bottom: 10px;
   margin-bottom: 30px;
 }

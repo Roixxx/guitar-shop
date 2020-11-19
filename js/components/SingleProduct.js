@@ -32,7 +32,7 @@ class SingleProduct {
 		// Product content
 		productDesc.innerHTML    = '';
 		productTitle.textContent = prodInfo.name;
-		productPrice.textContent = prodInfo.price + ' Р';
+		productPrice.textContent = prodInfo.price + ' рублей';
 		productImg.src           = prodInfo.img;
 
 		// Add to cart btn
