@@ -2,6 +2,7 @@ const productTitle = document.querySelector('.product__title');
 const productImg = document.querySelector('.product__img');
 const productPrice = document.querySelector('.product__price');
 const productDesc = document.querySelector('.product__desc-list')
+const productBtn = document.querySelector('.addToCart');
 
 
 class SingleProduct {
@@ -15,23 +16,25 @@ class SingleProduct {
 	}
 
 	getProduct() {
-		fetch('../../php/getProduct.php?' + this.getParam())
-			.then(res => res.json())
-			.then(res => this.product = res)
-			.then(() => {
-				console.log(this.product)
-				this.render()
-			})
+		return new Promise((resolve, reject) => {
+			fetch('../../php/getProduct.php?' + this.getParam())
+				.then(res => res.json())
+				.then(res => this.product = res)
+				.then(() => resolve())
+				.catch(err => reject(err));
+		});
 	}
 
 	render() {
 
 		let prodInfo = this.product.info;
-		
+		productDesc.innerHTML    = '';
 		productTitle.textContent = prodInfo.name;
-		productImg.src = prodInfo.img;
 		productPrice.textContent = prodInfo.price + ' Р';
-		productDesc.innerHTML = '';
+		productImg.src           = prodInfo.img;
+
+		productBtn.onclick = () => productsSection.handleProductStatus(productBtn, prodInfo.id);
+
 
 		this.product.characteristics.forEach((el) => {
 
