@@ -18,15 +18,15 @@
 	<header id="header" class="header">
 		<div class="container">
 			<h1 class="header__title"><a href="./">Guitar Go</a></h1>
-			<a class="header__link" href="./">Каталог</a>
+			<a class="header__link" href="./">Каталог товаров</a>
 			<a class="header__link" href="./cart.html">Корзина</a>
 			<div class="header__cart-holder">
 				<a href="/cart.html" class="header__cart" onclick="cart.showCart()"><img src="img/cart.png" alt="Cart"></a>
 				<p class="header__cart-counter">0</p>
 			</div>
-	
+
 		</div>
-	
+
 	</header>
 
 	<section class="cart">
@@ -43,14 +43,20 @@
 					<a class="cart__empty-btn cart__go-back" href="./">Каталог товаров</a>
 					<div>
 						<p>Итого: <span class="cart__footer-price"></span> &#8381;</p>
-						<a class="cart__go-order" href="./">Оформить заказ</a>
+						<a class="cart__go-order" href="#" onclick="alert('Сервис недоступен')">Оформить заказ</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
-
+	<footer class="footer">
+		<div class="container footer__holder">
+			<p>Guitar Go - магазин гитар</p>
+			<p>Адрес: Москва, ул. Уличная 24/2</p>
+			<p>Телефон: +79999999999</p>
+		</div>
+	</footer>
 
 	<script src="js/components/Header.js"></script>
 	<script src="js/components/LocalStorage.js"></script>

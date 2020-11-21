@@ -47,8 +47,10 @@ class Cart {
 
 	delProduct(id) {
 		localStorageCart.delProduct(id);
+		this.totalPrice = 0;
 		this.render();
 		this.showTotalPrice();
+		headerSection.showItemsInCart();
 	}
 
 	render() {

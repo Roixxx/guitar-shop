@@ -10,6 +10,7 @@ $linear-gradient: linear-gradient(to right, #e2f87c, #d6f567, #c8f151, #b9ee38, 
 $box-shadow: 0 16px 24px 2px rgba(33, 37, 41, 0.02), 0 6px 30px 5px rgba(33, 37, 41, 0.04),
 	0 8px 10px -5px rgba(33, 37, 41, 0.1);
 
+
 body {
 	margin: 0;
 	padding: 0;
@@ -34,14 +35,14 @@ body {
 		height: 100%;
 		padding: 0 40px;
 		display: flex;
-		justify-content: space-between;
 		align-items: center;
 	}
 
 	&__link {
-		font-size: 23px;
-		color: #000;
-		font-size: 800;
+		font-size: 17px;
+		text-transform: uppercase;
+		color: #0060ad;
+		font-weight: 600;
 		transition: background-color 0.3s;
 		padding: 10px;
 		border-radius: 15px;
@@ -55,12 +56,14 @@ body {
 		font-weight: 400;
 		color: black !important;
 		font-size: 40px;
+		margin-right: 20px;
 		text-align: center;
 		display: inline-block;
 		font-family: "Roboto", sans-serif;
 		background: url("../img/guitar.png") no-repeat;
 		background-size: contain;
 		padding-left: 60px;
+
 
 		&:hover {
 			color: black;
@@ -70,6 +73,7 @@ body {
 	&__cart-holder {
 		display: flex;
 		align-items: center;
+		margin-left: auto;
 	}
 
 	&__cart {
@@ -93,7 +97,23 @@ body {
 		font-size: 20px;
 		margin-left: 10px;
 	}
+
+	&__address {
+		font-size: 20px;
+	}
 }
+
+.intro {
+	&__holder {
+		font-size: 22px;
+		padding: 20px;
+		padding-left: 25px;
+		margin-top: 40px;
+		border-radius: 20px;
+		background-color: #DBE9F4;
+	}
+}
+
 
 .products-container {
 	display: grid;
@@ -108,6 +128,7 @@ body {
 
 .products-element {
 	max-width: 400px;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
@@ -246,10 +267,14 @@ body {
 		font-size: 20px;
 	}
 
+	&__go-back {
+		align-self: flex-end;
+	}
+
 	&__go-order {
 		background-color: #d8dff9;
 		padding: 10px 20px;
-		margin: 15px 0;
+		margin-top: 15px;
 		color: #000;
 		transition: background-color 0.3s;
 
@@ -307,6 +332,9 @@ body {
 		width: auto;
 		height: 100%;
 		max-height: 600px;
+		max-width: 400px;
+		min-width: 200px;
+		min-height: 200px;
 		padding: 50px;
 		background-color: white;
 		border: 2px solid #b1b1b1;
@@ -355,6 +383,20 @@ body {
 
 	&__bottom {
 		display: flex;
+		align-items: center;
+	}
+}
+
+.footer {
+	height: 60px;
+	background-color: #ebfddd;
+	width: 100%;
+
+	&__holder {
+		height: 100%;
+		font-size: 20px;
+		display: flex;
+		justify-content: space-around;
 		align-items: center;
 	}
 }

@@ -26,18 +26,16 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 .header__link {
-  font-size: 23px;
-  color: #000;
-  font-size: 800;
+  font-size: 17px;
+  text-transform: uppercase;
+  color: #0060ad;
+  font-weight: 600;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
   padding: 10px;
@@ -52,6 +50,7 @@ body {
   font-weight: 400;
   color: black !important;
   font-size: 40px;
+  margin-right: 20px;
   text-align: center;
   display: inline-block;
   font-family: "Roboto", sans-serif;
@@ -71,6 +70,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-left: auto;
 }
 
 .header__cart {
@@ -96,6 +96,19 @@ body {
   margin-left: 10px;
 }
 
+.header__address {
+  font-size: 20px;
+}
+
+.intro__holder {
+  font-size: 22px;
+  padding: 20px;
+  padding-left: 25px;
+  margin-top: 40px;
+  border-radius: 20px;
+  background-color: #DBE9F4;
+}
+
 .products-container {
   display: -ms-grid;
   display: grid;
@@ -111,6 +124,7 @@ body {
 
 .products-element {
   max-width: 400px;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -289,10 +303,15 @@ body {
   font-size: 20px;
 }
 
+.cart__go-back {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
 .cart__go-order {
   background-color: #d8dff9;
   padding: 10px 20px;
-  margin: 15px 0;
+  margin-top: 15px;
   color: #000;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
@@ -357,6 +376,9 @@ body {
   width: auto;
   height: 100%;
   max-height: 600px;
+  max-width: 400px;
+  min-width: 200px;
+  min-height: 200px;
   padding: 50px;
   background-color: white;
   border: 2px solid #b1b1b1;
@@ -411,6 +433,25 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer {
+  height: 60px;
+  background-color: #ebfddd;
+  width: 100%;
+}
+
+.footer__holder {
+  height: 100%;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
