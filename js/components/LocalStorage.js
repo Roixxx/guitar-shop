@@ -17,7 +17,7 @@ class LocalStorageCart {
 	putProduct(id) {
 		let products = this.getProducts();
 		let pushing = false;
-		let index = products.indexOf(id)
+		let index = products.indexOf(id);
 
 		// Есть ли товар в корзине?
 		if (index === -1) {
@@ -28,8 +28,15 @@ class LocalStorageCart {
 		}
 
 		localStorage.setItem('productIDs', JSON.stringify(products));
-
 		return pushing;
+	}
+
+	delProduct(id) {
+		let products = this.getProducts();
+		let index = products.indexOf(id.toString());
+
+		products.splice(index, 1);
+		localStorage.setItem('productIDs', JSON.stringify(products));
 	}
 }
 

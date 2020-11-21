@@ -204,6 +204,10 @@ body {
 		padding: 10px 0;
 	}
 
+	&__item:not(:last-child) {
+		border-bottom: 1px solid black;
+	}
+
 	&__footer {
 		display: flex;
 		justify-content: space-between;
@@ -234,10 +238,42 @@ body {
 		}
 	}
 
-	&__go-back {
+	&__go-back,
+	&__go-order {
+		align-self: flex-start;
 		margin: 0;
     padding: 13px 15px;
 		font-size: 20px;
+	}
+
+	&__go-order {
+		background-color: #d8dff9;
+		padding: 10px 20px;
+		margin: 15px 0;
+		color: #000;
+		transition: background-color 0.3s;
+
+		&:hover {
+			background-color: #b6c4f9;
+		}
+	}
+
+	&__delete {
+		margin-left: 10px;
+		font-size: 16px;
+		background: url("../img/delete.png") no-repeat;
+		background-size: cover;
+		width: 20px;
+		height: 20px;
+		border: none;
+		cursor: pointer;
+		transition: background-color 0.3s;
+		padding: 5px;
+		border-radius: 50%;
+
+		&:hover {
+			background-color: #79777729;
+		}
 	}
 }
 

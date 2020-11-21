@@ -14,7 +14,7 @@ class Cart {
 		cartTotalPrice.textContent = this.totalPrice;
 	}
 
-	//получаем леёбл кнопки добавить/удалить в корзины
+	//получаем лейбл кнопки добавить/удалить в корзины
 	getCartBtnLable(productID) {
 		let localCart = localStorageCart.getProducts(); // получаем товары, которые уже в корзине
 
@@ -45,6 +45,12 @@ class Cart {
 		headerSection.showItemsInCart();
 	}
 
+	delProduct(id) {
+		localStorageCart.delProduct(id);
+		this.render();
+		this.showTotalPrice();
+	}
+
 	render() {
 
 		let productsInCart = localStorageCart.getProducts();
@@ -58,7 +64,10 @@ class Cart {
 				html += `
 					<li class="cart__item">
 						<p class="cart__item-name">${name}</p>
-						<p class="cart__item-price">${price} &#8381;</p>
+						<div style="display:flex; align-items: center">
+							<p class="cart__item-price">${price} &#8381;</p>
+							<button class="cart__delete" onclick="cart.delProduct(${id})"></button>
+						</div>
 					</li>
 				`;
 			}
@@ -67,7 +76,7 @@ class Cart {
 		if (!html) {
 			html =
 				`<li class="cart__empty">
-          <p>Cart is empty</p>
+          <p>Корзина пуста</p>
         </li>`;
 		}
 
