@@ -50,5 +50,7 @@ class SingleProduct {
 
 
 
+window.onload = () => console.log('loaded');
+
 const singleProduct = new SingleProduct();
 singleProduct.getProduct()
