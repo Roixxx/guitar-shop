@@ -525,6 +525,22 @@ body {
   }
 }
 
+@media (max-width: 750px) {
+  .footer__holder {
+    padding: 15px 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer__holder p {
+    margin: 0 !important;
+  }
+  .footer__holder p:not(:last-child) {
+    margin-bottom: 10px !important;
+  }
+}
+
 @media (max-width: 630px) {
   .header__link {
     display: none;
