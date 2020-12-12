@@ -351,8 +351,9 @@ body {
 		margin: 30px 0;
 	}
 
-	.container {
+	&__holder {
 		margin-top: 20px;
+		margin-bottom: 40px;
 		background-color: #fcfbf7;
 		border-radius: 10px;
 		padding: 20px 40px;
@@ -383,11 +384,12 @@ body {
 
 	&__price {
 		font-size: 30px;
+		margin-right: 20px;
+		margin-bottom: 15px;
 	}
 
 	.addToCart {
 		margin: 0;
-		margin-left: 20px;
 		font-weight: 700;
 		color: white;
 		text-decoration: none;
@@ -425,6 +427,7 @@ body {
 	&__bottom {
 		display: flex;
 		align-items: center;
+		flex-wrap: wrap;
 	}
 }
 
@@ -448,13 +451,13 @@ body {
 
 @media (max-width: 1000px) {
 	.footer__holder{
-		p {
-			margin: 0px 30px;
-		}
+		//p {
+		//	margin: 0px 30px;
+		//}
 
-		p:last-child {
-			margin-top: 10px;
-		}
+		//p:last-child {
+		//	margin-top: 10px;
+		//}
 	}
 
 }
@@ -476,9 +479,34 @@ body {
 
 }
 
+@media (max-width: 650px) {
+	.product__holder {
+		padding: 20px 20px;
+	}
+
+	.product__img {
+		max-height: 500px;
+    max-width: 245px;
+    height: 100%;
+	}
+
+}
+
 @media (max-width: 630px) {
 	.header__link {
 		display: none;
+	}
+
+	.product__info {
+		flex-direction: column;
+	}
+
+	.product__img {
+		margin: 0 auto;
+	}
+
+	.product__desc {
+		margin-top: 30px;
 	}
 
 }
@@ -509,6 +537,10 @@ body {
 
 	.header__title {
 		font-size: 32px;
+	}
+
+	.product .container {
+		padding: 0px;
 	}
 }
 
