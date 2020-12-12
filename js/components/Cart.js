@@ -66,8 +66,8 @@ class Cart {
 				html += `
 					<li class="cart__item">
 						<p class="cart__item-name">${name}</p>
-						<div style="display:flex; align-items: center">
-							<p class="cart__item-price">${price} &#8381;</p>
+						<div class="cart__item-price">
+							<p>${price} &#8381;</p>
 							<button class="cart__delete" onclick="cart.delProduct(${id})"></button>
 						</div>
 					</li>
